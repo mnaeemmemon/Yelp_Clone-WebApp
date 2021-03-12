@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-            if(array_key_exists('go', $_POST))
-            {
-                header('location: Home.html');
-            } 
-
-
-?>
 <html>
   <head>
     <title>Recommendation System Form</title>
@@ -196,7 +187,7 @@
   </head>
   <body>
     <div class="testbox">
-      <form method="post">
+      <form action="send_request_yelp.php" method="post">
         <div class="banner">
           <h1>Recommendation System Form</h1>
         </div>
