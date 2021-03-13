@@ -4,6 +4,9 @@
     <title>Recommendation System Form</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+
     <style>
       html, body {
       min-height: 100%;
@@ -221,12 +224,15 @@
         </div>
         <div class="item">
             <label for="interest">Interest<span>*</span></label>
-            <input id="interest" type="text" name="interest" required/>
+            <input id="interest" type="text" name="interest" data-role="taginput" required/>
           </div>
         <div class="btn-block">
            <input name="go" style="background-color: black; margin-left: auto; margin-right: auto; display: block; width: 20%; border-radius: 10px; color: white" type="submit" value="SUBMIT"/> 
         </div>
       </form>
     </div>
+
+    <!-- Metro 4 -->
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
   </body>
 </html>
