@@ -17,14 +17,18 @@
             print_r($response_array['name'] . "<br>");
             print_r($response_array['email'] . "<br>");
             print_r($response_array['phone'] . "<br>");
+            // just json encode to display the string
+            print_r(json_encode($response_array['tags']) . "<br>");
 
             // tags set
             $tag_list = $response_array['tags'];
 
             $count = 0;
 
+            // using this for loop approach to display the data.
             foreach($tag_list as $tag){
               echo "<h5>" . $tag . "</h5>";
+              // you can use json_encode function of php to encode this whole procedure and then using the json reader to read the data properly.
               print_r($response_array[$count++][$tag]);
               echo "<br>";
             }

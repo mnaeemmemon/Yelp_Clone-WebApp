@@ -1,5 +1,6 @@
 <?php
     include_once 'send_api_request.php';
+    include_once 'object_discriptor.php';
 ?>
 <?php
     // if the request is of post type
@@ -19,7 +20,7 @@
             $response_array = array('name' => $name, 'email' => $email, 'phone' => $phone, 'tags' => $interest);
 
             foreach($interest as $tag){
-                array_push($response_array, array($tag => send_request($address, trim($tag))));
+                array_push($response_array, array($tag => object_discriptor(json_decode(send_request($address, trim($tag))))));
             }
 
             require_once 'display_buisness.php';
