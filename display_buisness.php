@@ -17,19 +17,16 @@
             print_r($response_array['name'] . "<br>");
             print_r($response_array['email'] . "<br>");
             print_r($response_array['phone'] . "<br>");
-            if(isset($response_array[0])){
-                echo "<h5>" . "Food" . "</h5>";
-                print_r($response_array[0]['food']);
-            }
-            if(isset($response_array[1])){
-                echo "<h5>" . "Gym" . "</h5>";
-                echo "<br>";
-                print_r($response_array[1]['gym']);
-            }
-            if(isset($response_array[2])){
-                echo "<h5>" . "Digital" . "</h5>";
-                echo "<br>";
-                print_r($response_array[2]['digital']);
+
+            // tags set
+            $tag_list = $response_array['tags'];
+
+            $count = 0;
+
+            foreach($tag_list as $tag){
+              echo "<h5>" . $tag . "</h5>";
+              print_r($response_array[$count++][$tag]);
+              echo "<br>";
             }
         ?>
     </div>

@@ -16,7 +16,7 @@
 
             $address = urlencode($address . "," . $city);
 
-            $response_array = array('name' => $name, 'email' => $email, 'phone' => $phone);
+            $response_array = array('name' => $name, 'email' => $email, 'phone' => $phone, 'tags' => $interest);
 
             foreach($interest as $tag){
                 array_push($response_array, array($tag => send_request($address, trim($tag))));
